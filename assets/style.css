@@ -1,0 +1,1019 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Heebo:400,700,900|Inter:400,600");
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical>* {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal>* {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay.animate-appear {
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: block;
+  opacity: 0;
+}
+
+.overlay.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000000;
+  --blue-zodiac: #142850;
+  --ebony-clay: #21243d;
+  --parsley: #136223;
+  --regent-gray: #8594a3;
+  --scarpa-flow: #52575c;
+  --white: #ffffff;
+
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 20px;
+  --font-size-xs: 12px;
+  --font-size-xxl: 30px;
+  --font-size-xxxl: 44px;
+
+  --font-family-heebo: "Heebo", Helvetica;
+  --font-family-inter: "Inter", Helvetica;
+}
+
+.inter-normal-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-scarpa-flow-12px {
+  color: var(--scarpa-flow);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.heebo-normal {
+  color: var(--ebony-clay);
+  font-family: var(--font-family-heebo);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-parsley-18px {
+  color: var(--parsley);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.heebo-bold-ebony-clay-30px {
+  color: var(--ebony-clay);
+  font-family: var(--font-family-heebo);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.heebo-normal-regent-gray-20px {
+  color: var(--regent-gray);
+  font-family: var(--font-family-heebo);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.heebo-black-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-heebo);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.inter-semi-bold-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* screen - home */
+
+.home {
+  background-color: var(--white);
+  height: 2041px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1152px;
+}
+
+.home .ellipse-2 {
+  background-color: #edf7fa;
+  border-radius: 121.5px;
+  height: 243px;
+  left: 755px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 223px;
+  width: 243px;
+}
+
+.home .john-doe {
+  background-color: transparent;
+  color: var(--ebony-clay);
+  font-family: var(--font-family-heebo);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 148px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 228px;
+  width: 508px;
+}
+
+.home .lorem-ipsum {
+  background-color: transparent;
+  height: auto;
+  left: 148px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 373px;
+  width: 499px;
+}
+
+.home .ellipse-1 {
+  background-color: transparent;
+  height: 243px;
+  left: 760px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 210px;
+  width: 243px;
+}
+
+.home .rectangle-23 {
+  background-color: #edf7fa;
+  height: 396px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 595px;
+  width: 1152px;
+}
+
+.home .info {
+  background-color: transparent;
+  height: 145px;
+  left: 148px;
+  position: absolute;
+  top: 645px;
+  width: 398px;
+}
+
+.home .group-2 {
+  background-color: transparent;
+  height: 28px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 219px;
+}
+
+.home .icon-phone {
+  background-color: transparent;
+  color: #0f0101;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0.80px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 182px;
+}
+
+.home .group-3 {
+  background-color: transparent;
+  height: 28px;
+  left: -0px;
+  position: absolute;
+  top: 39px;
+  width: 395px;
+}
+
+.home .icon-envelope {
+  background-color: transparent;
+  color: #0b0000;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0.80px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: -0px;
+  width: 357px;
+}
+
+.home .group-4 {
+  background-color: transparent;
+  height: 28px;
+  left: 2px;
+  position: absolute;
+  top: 78px;
+  width: 383px;
+}
+
+.home .icon-calc {
+  background-color: transparent;
+  color: #0c0101;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0.80px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: -0px;
+  width: 348px;
+}
+
+.home .group-5 {
+  background-color: transparent;
+  height: 28px;
+  left: 3px;
+  position: absolute;
+  top: 117px;
+  width: 397px;
+}
+
+.home .icon-map {
+  background-color: transparent;
+  color: #0d0000;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0.80px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: -0px;
+  width: 363px;
+}
+
+.home .headline-day-contact {
+  background-color: transparent;
+  height: 22px;
+  left: 146px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 603px;
+  width: 132px;
+}
+
+.home .headline-contact {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.27px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home .headline-day {
+  background-color: transparent;
+  height: 22px;
+  left: 146px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1020px;
+  width: 132px;
+}
+
+.home .headline {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.27px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home .footer {
+  background-color: transparent;
+  height: 182px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1859px;
+  width: 1152px;
+}
+
+.home .rectangle-40 {
+  background-color: var(--white);
+  height: 182px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1152px;
+}
+
+.home .fb {
+  background-color: transparent;
+  height: 30px;
+  left: 459px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 51px;
+  width: 30px;
+}
+
+.home .linkedin {
+  background-color: transparent;
+  height: 30px;
+  left: 651px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 51px;
+  width: 30px;
+}
+
+.home .twitter {
+  background-color: transparent;
+  height: 30px;
+  left: 589px;
+  position: absolute;
+  top: 51px;
+  width: 37px;
+}
+
+.home .insta {
+  background-color: transparent;
+  height: 30px;
+  left: 524px;
+  position: absolute;
+  top: 51px;
+  width: 30px;
+}
+
+.home .copyright-2020 {
+  background-color: transparent;
+  color: var(--ebony-clay);
+  font-family: var(--font-family-heebo);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 464px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 107px;
+  width: auto;
+}
+
+.home .designing-dashboards {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1077px;
+  width: auto;
+}
+
+.home .vibrant-portraits {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1312px;
+  width: auto;
+}
+
+.home .x36-days {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1560px;
+  width: auto;
+}
+
+.home .dashboard {
+  background-color: transparent;
+  height: auto;
+  left: 498px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1137px;
+  width: 376px;
+}
+
+.home .illustration {
+  background-color: transparent;
+  height: auto;
+  left: 498px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1368px;
+  width: 376px;
+}
+
+.home .typography {
+  background-color: transparent;
+  height: auto;
+  left: 498px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1613px;
+  width: 376px;
+}
+
+.home .amet-minim-moll-nt-nostrud-amet {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1188px;
+  width: 596px;
+}
+
+.home .amet-minim-moll-nt-nostrud-amet {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1419px;
+  width: 596px;
+}
+
+.home .amet-minim-moll-nt-nostrud-amet {
+  background-color: transparent;
+  height: auto;
+  left: 413px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1679px;
+  width: 509px;
+}
+
+.home .rectangle-2 {
+  background-color: var(--blue-zodiac);
+  border-radius: 16px;
+  height: 25px;
+  left: 410px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1141px;
+  width: 62px;
+}
+
+.home .rectangle-37 {
+  background-color: var(--blue-zodiac);
+  border-radius: 16px;
+  height: 25px;
+  left: 410px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1372px;
+  width: 62px;
+}
+
+.home .rectangle-38 {
+  background-color: var(--blue-zodiac);
+  border-radius: 16px;
+  height: 25px;
+  left: 410px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1617px;
+  width: 62px;
+}
+
+.home .x2020 {
+  background-color: transparent;
+  height: auto;
+  left: 420px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1123px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home .x2018 {
+  background-color: transparent;
+  height: auto;
+  left: 420px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1354px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home .x2018 {
+  background-color: transparent;
+  height: auto;
+  left: 420px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1599px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home .rectangle-30 {
+  background-color: transparent;
+  height: 180px;
+  left: 146px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 1088px;
+  width: 246px;
+}
+
+.home .rectangle-32 {
+  background-color: transparent;
+  height: 180px;
+  left: 146px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 1314px;
+  width: 246px;
+}
+
+.home .rectangle-34 {
+  background-color: transparent;
+  height: 184px;
+  left: 146px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 1560px;
+  width: 246px;
+}
+
+.home .education {
+  background-color: transparent;
+  height: 384px;
+  left: 578px;
+  overflow: hidden;
+  position: absolute;
+  top: 607px;
+  width: 398px;
+}
+
+.home .headline-day-education {
+  background-color: transparent;
+  height: 22px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 132px;
+}
+
+.home .headline-education {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.27px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home .content-day-education-1 {
+  background-color: transparent;
+  height: 80px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 398px;
+}
+
+.home .your-university-1 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.21px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home .your-major-1 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  width: auto;
+}
+
+.home .content-1 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  width: 400px;
+}
+
+.home .content-2 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 65px;
+  width: 400px;
+}
+
+.home .your-university-2 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.21px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 134px;
+  width: auto;
+}
+
+.home .content-day-education-2 {
+  background-color: transparent;
+  height: 66px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 167px;
+  width: 398px;
+}
+
+.home .your-major-2 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home .content-3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  width: 400px;
+}
+
+.home .content-4 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 42px;
+  width: 400px;
+}
+
+.home .content-day-education-3 {
+  background-color: transparent;
+  height: 80px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 249px;
+  width: 398px;
+}
+
+.home .your-university-3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.21px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home .your-major-3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  width: auto;
+}
+
+.home .content-5 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  width: 400px;
+}
+
+.home .content-6 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 65px;
+  width: 400px;
+}
